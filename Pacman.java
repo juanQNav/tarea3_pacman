@@ -1,15 +1,8 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
-/**
- * Write a description of class Pacman here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class Pacman extends Actor
 {
     private static final int COUNT_DOWN_STAR_VALUE = 11;
-    private static final int OFFSET = 10;
+    private static final int OFFSET = 8;
     private static final int DIRECTION_RIGHT = 0;
     private static final int DIRECTION_LEFT = 1;
     private static final int DIRECTION_UP = 2;
@@ -123,24 +116,16 @@ public class Pacman extends Actor
          move[directionCollision] = false;
          switch (directionCollision){
          case DIRECTION_RIGHT:
-                if(move[DIRECTION_RIGHT]){
-                    setLocation(getX() - 100, getY());
-                }
+                    setLocation(getX() - 8, getY());
                 break;
             case DIRECTION_LEFT:
-                if(move[DIRECTION_LEFT]){
-                    setLocation(getX() + 100, getY());
-                }
+                    setLocation(getX() + 8, getY());
                 break;
             case DIRECTION_UP:
-                if(move[DIRECTION_UP]){
-                    setLocation(getX(),getY() + 100);
-                }
+                    setLocation(getX(),getY() + 8);
                 break;
             case DIRECTION_DOWN:
-                if(move[DIRECTION_DOWN]){
-                    setLocation(getX(),getY() - 100);
-                }
+                    setLocation(getX(),getY() - 8);
                 break;
     }
     }
